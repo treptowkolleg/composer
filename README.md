@@ -1,7 +1,5 @@
 # PHP Framework Template
 
-## Einrichtung
-
 - [Repository klonen](#repository-klonen)
 - [Packages installieren](#packages-installieren)
 - [Environment einrichten](#environment-einrichten)
@@ -9,6 +7,8 @@
 - [Controller](#controller)
 - [HTML-Templates](#html-templates)
 - [Dev-Server starten](#dev-server-starten)
+
+## Einrichtung
 
 ### Repository klonen
 
