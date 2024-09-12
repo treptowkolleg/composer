@@ -9,9 +9,12 @@ class NotFoundController extends AbstractController
 
     public function notFound($uri = null): void
     {
+        $this->meta->add('title','Seite nicht gefunden!');
         $url = (null !== $uri)? $this->response->generateUrlFromString($uri) : null;
 
-        print "Die Url {$url} ist nicht oder nicht mehr vorhanden!";
+        echo $this->render('error/not_found.html', [
+            'url' => $url,
+        ]);
     }
 
 }

@@ -162,6 +162,11 @@ abstract class AbstractController implements ControllerInterface
         return  new GenericRepository($entity);
     }
 
+    public function getRoutes(): RouteConfig
+    {
+        return $this->routes;
+    }
+
     /**
      * @param string|null $message
      * @param string|null $type

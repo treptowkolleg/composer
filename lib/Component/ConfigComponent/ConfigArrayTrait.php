@@ -8,7 +8,7 @@ namespace Core\Component\ConfigComponent;
 trait ConfigArrayTrait
 {
 
-    protected Array $argument;
+    protected array $argument;
 
     /**
      * @return string|array
@@ -16,6 +16,11 @@ trait ConfigArrayTrait
     protected function getArgument(string $name)
     {
         return $this->argument[$name];
+    }
+
+    public function getArguments(): array
+    {
+        return $this->argument;
     }
 
     /**
@@ -30,5 +35,7 @@ trait ConfigArrayTrait
         }
         return $this;
     }
+
+
 
 }

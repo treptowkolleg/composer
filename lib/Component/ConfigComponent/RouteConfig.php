@@ -24,4 +24,5 @@ class RouteConfig extends AbstractConfig implements RouteConfigInterface
     {
         return $this->getArgument($route);
     }
+
 }
