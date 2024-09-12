@@ -1,0 +1,26 @@
+# Route zur Methode "index()" der Klasse "AppController"
+app_index:
+  expression: '/'
+  controller: 'App\Controller\AppController'
+  method: 'index'
+  request: 'get'
+
+# Route zur Methode "show(int $id)" der Klasse "ExamController"
+exam_show:
+  expression: '/exams/([0-9]*)/show'
+  controller: 'App\Controller\ExamController'
+  method: 'show'
+  request: 'get'
+
+# Route zum Login und Logout
+authentication_login:
+  expression: '/login'
+  controller: 'App\Controller\AuthenticationController'
+  method: 'login'
+  request: ['get','post']
+
+authentication_logout:
+  expression: '/logout'
+  controller: 'App\Controller\AuthenticationController'
+  method: 'logout'
+  request: 'get'
