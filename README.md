@@ -2,6 +2,14 @@
 
 ## Einrichtung
 
+- [Repository klonen](#repository-klonen)
+- [Packages installieren](#packages-installieren)
+- [Environment einrichten](#environment-einrichten)
+- [Routing](#routing)
+- [Controller](#controller)
+- [HTML-Templates](#html-templates)
+- [Dev-Server starten](#dev-server-starten)
+
 ### Repository klonen
 
 Erstelle ein neues Projekt, indem du ``Get from VCS`` wählst
