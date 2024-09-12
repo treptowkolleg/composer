@@ -145,3 +145,6 @@ Zum Testen des Projekts ohne die Einbindung der Assets geht auch:
 ````bash
 php -S localhost:3000 index.php
 ````
+
+Hier werden nun alle Anfragen an die ``index.php`` weitergeleitet. Das macht
+das Einbinden von Stylesheets und Javascript-Dateien unmöglich.
