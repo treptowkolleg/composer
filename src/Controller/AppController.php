@@ -10,7 +10,6 @@ class AppController extends AbstractController
     public function index(int $id = null): string
     {
         $this->meta->add('title','Hello World!');
-
         $routeUrls = [];
         // Routen, die zusätzliche Werte benötigen, werden ignoriert.
         foreach($this->getRoutes()->getArguments() as $route => $content) {
