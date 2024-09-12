@@ -128,3 +128,20 @@ $this->layout('base.html');
 <?php $this->stop()?>
 ````
 
+### Dev-Server starten
+
+Da der php-interne Entwicklungsserver leider keine ``.htaccess``-Dateien
+verarbeiten kann (das sind Config-Dateien für den Apache-Server), werden
+hierbei keine assets gefunden. Daher empfiehlt sich hier lieber der
+Symfony-Entwicklungsserver, der wie folgt gestartet/gestoppt wird:
+
+````bash
+symfony server:start
+symfony server:stop
+````
+
+Zum Testen des Projekts ohne die Einbindung der Assets geht auch:
+
+````bash
+php -S localhost:3000 index.php
+````
