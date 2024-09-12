@@ -41,7 +41,7 @@ app_index:
   request: 'get'
 ````
 
-Das oben gezeigte Beispiel zeigt bei der url ``https//web.domain/`` auf
+Das oben gezeigte Beispiel zeigt bei der url ``https://web.domain/`` auf
 den Controller ``src/Controller/AppController.php`` und ruft die Methode
 ``index()`` auf. Allerdings sind hier nur ``GET``-Requests erlaubt. ``POST``-Requests
 ignorieren diese Route.
