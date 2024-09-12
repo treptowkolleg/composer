@@ -9,6 +9,7 @@
     "league/plates": "v3.x-dev",
     "php": ">=8.1",
     "symfony/yaml": "5.4.x-dev",
-    "symfony/error-handler": "6.3.x-dev"
+    "symfony/error-handler": "6.3.x-dev",
+    "ext-openssl": "*"
   }
 }
