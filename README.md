@@ -71,4 +71,60 @@ class AppController
 
 Passend zur obigen Route wurde hier die Controller-Klasse erzeugt. Für
 erweiterte Funktionalitäten können deine Controller-Klassen auch von
-``Core\Controller\AbstractController`` erben. Dazu später mehr.
+``Core\Controller\AbstractController`` erben. So kannst du die implementierte
+Template-Engine verwenden:
+
+````php
+<?php
+# src/Controller/AppController.php
+
+namespace App\Controller;
+
+use Core\Controller\AbstractController;
+
+class AppController extends AbstractController
+{
+
+    public function index(): string
+    {
+        return $this->render('app/index.html', [
+            'controllerName' => "AppController",
+        ]);
+    }
+
+}
+````
+
+### HTML-Templates
+
+Deine Templates kannst du unter ``templates/`` anlegen. Du findest hier
+auch schon ein Beispiel.
+
+````php
+<?php
+# templates/app/index.html.php
+
+/**
+ * @var string $controllerName
+ */
+ 
+// übergeordnetes Template
+$this->layout('base.html');
+?>
+
+<?php $this->start('body') ?>
+<section class="bg-light border-bottom">
+    <div class="container">
+        <h1>Hello World!</h1>
+    </div>
+</section>
+
+<section>
+    <article class="container">
+        <p class="lead">Diese Seite wurde von "<?=$controllerName?>" aufgerufen.</p>
+        <p>Bearbeite die Datei <code>/templates/app/index.html.php</code>, um den Inhalt anzupassen.</p>
+    </article>
+</section>
+<?php $this->stop()?>
+````
+
