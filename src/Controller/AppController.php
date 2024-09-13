@@ -26,4 +26,12 @@ class AppController extends AbstractController
         ]);
     }
 
+    public function show(): string
+    {
+        $this->denyAccessUnlessLogin();
+        $this->meta->add('title','Willkommen!');
+
+        return "Du bist eingeloggt.";
+    }
+
 }

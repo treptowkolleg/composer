@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Core\Component\UserComponent\PasswordService;
+use Core\Component\UserComponent\UserInterface;
 use Core\Model\DateTimeEntityTrait;
 use Core\Model\IdEntityTrait;
 use Core\Service\EncryptionService;
 
-final class User
+final class User implements UserInterface
 {
     use IdEntityTrait;
     use DateTimeEntityTrait;

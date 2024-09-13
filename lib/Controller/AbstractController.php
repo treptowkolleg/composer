@@ -82,7 +82,7 @@ abstract class AbstractController implements ControllerInterface
         return $this->view;
     }
 
-    public function denyAccessUnlessGranted(string $role)
+    public function denyAccessUnlessGranted(string $role): void
     {
         if(false !== $user = $this->session->getUser()){
             if($user->getRole() != $role) {
@@ -93,24 +93,10 @@ abstract class AbstractController implements ControllerInterface
         }
     }
 
-    public function denyAccessUnlessHasPermission(string $condition, string $redirectToRoute = 'app_index')
+    public function denyAccessUnlessLogin(string $redirectToRoute = 'app_index'): void
     {
-        if(false !== $user = $this->session->getUser()){
-            $permissionFound = true;
-            foreach($user->getPermissions() as $permission)
-            {
-                if($condition == $permission->getLabel())
-                {
-                    $permissionFound = false;
-
-                }
-            }
-
-            if($permissionFound)
-            {
-                $this->response->redirectToRoute(302,$redirectToRoute);
-            }
-        } else {
+        if(!$this->session->getUser()) {
+            $this->setFlash(501,"danger");
             $this->response->redirectToRoute(302,$redirectToRoute);
         }
     }
@@ -180,7 +166,7 @@ abstract class AbstractController implements ControllerInterface
 
         if ($message) {
 
-            $flash = $this->render('/app/_toast.html', [
+            $flash = $this->render('/component/_toast.html', [
                 'type' => $type,
                 'message' => $message,
                 'trans' => $this->trans,

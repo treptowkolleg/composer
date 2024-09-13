@@ -3,6 +3,7 @@
 /**
  * @var object|null $meta enthält Meta-Daten der Website
  * @var object $response enthält Response-Daten des Controllers
+ * @var null|string $flash Flash Message Container
  */
 
 ?>
@@ -25,6 +26,7 @@
     </head>
     <body>
         <?=$this->section('body')?>
+        <?php echo $flash;?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script type="module" src="<?= $response->generateUrlFromString('/assets/scripts/app.js')?>"></script>
     </body>

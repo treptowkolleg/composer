@@ -2,6 +2,7 @@
 200: Login erfolgreich.
 201: Logout erfolgreich.
 500: interner Server-Fehler
+501: Keine Berechtigung
 
 1601: Passwort ist keine Zeichenkette
 1602: Passwörter stimmen nicht überein

@@ -5,6 +5,12 @@ app_index:
   method: 'index'
   request: 'get'
 
+app_show:
+  expression: '/show'
+  controller: 'App\Controller\AppController'
+  method: 'show'
+  request: 'get'
+
 # Route zur Methode "show(int $id)" der Klasse "ExamController"
 exam_show:
   expression: '/exams/([0-9]*)/show'
