@@ -30,3 +30,9 @@ authentication_logout:
   controller: 'App\Controller\AuthenticationController'
   method: 'logout'
   request: 'get'
+
+api_chars_get:
+  expression: '/api/chars/get'
+  controller: 'App\Controller\Api\CharacterController'
+  method: 'getCharacters'
+  request: ['get','post']
