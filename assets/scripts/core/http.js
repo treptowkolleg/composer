@@ -29,7 +29,6 @@ export default class Http {
 
         this.xhr.onload = () => {
             if (this.xhr.readyState === 4 && this.xhr.status === 201) {
-                console.log(JSON.parse(this.xhr.responseText));
                 let response = JSON.parse(this.xhr.responseText);
                 this.render[func](element,target,response);
             } else {
