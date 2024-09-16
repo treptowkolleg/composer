@@ -34,7 +34,21 @@ $this->layout('base.html');
         <p class="lead mt-5">Error 404 gefällig?</p>
         <a href="/bla/keks">Falscher Link</a>
         <p class="mt-3">
-            <button class="btn btn-primary" id="char-btn" data-target="#chars" data-url="<?=$response->generateUrlFromRoute("api_chars_get")?>">Charakter-Infos laden</button>
+            <?php
+                $json = json_encode([
+                        "userId" => 0,
+                    "username" => "bwagner"
+                ],true);
+            ?>
+            <button
+                    class="btn btn-primary ajax"
+                    data-body="<?= htmlentities($json, ENT_QUOTES, 'UTF-8'); ?>"
+                    data-func="list"
+                    data-target="chars"
+                    data-url="<?=$response->generateUrlFromRoute("api_chars_get")?>"
+            >
+                Charakter-Infos laden
+            </button>
         </p>
 
         <div class="card">
