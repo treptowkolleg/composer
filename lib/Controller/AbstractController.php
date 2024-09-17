@@ -10,8 +10,6 @@ use Core\Component\HttpComponent\Response;
 use Core\Component\SeoComponent\Meta;
 use Core\Component\SessionComponent\Session;
 use Core\Component\SessionComponent\Translation;
-use Core\ErrorHandler\Exception\ResponseException;
-use Core\ErrorHandler\ExceptionHandler;
 use Exception;
 use League\Plates\Engine as View;
 
